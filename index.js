@@ -59,7 +59,7 @@ for (let element of selectElements) {
     })
 }
 
-// event listeners of flex-items input elements
+// event listeners of flex-items elements
 const inputElements = $(".flex-items input, .flex-items select");
 for (let element of inputElements) {
     $(`#${element.id}`).change((e) => {
