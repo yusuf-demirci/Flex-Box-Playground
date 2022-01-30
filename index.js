@@ -1,7 +1,7 @@
 // this function creates boxes according to the value of slider
 function createBoxes(num) {
     for (let i = 0; i < num; i++) {
-        $('.board').append(`<div class="box">${i + 1}</div>`)
+        $('.board').append(`<div class="box">${i + 1}</div>`);
     }
 }
 
@@ -12,8 +12,8 @@ function resetBoard() {
 function resetFlexItems(){
     let inputElements = $("input[type='number']")
     for (let element of inputElements) {
-        $(`#${element.id}`).val("")
-        $(`#${element.id}`).css(`${element.id}`, "")
+        $(`#${element.id}`).val("");
+        $(`#${element.id}`).css(`${element.id}`, "");
     }
 
     let selectElements = $(".flex-items select")
@@ -39,10 +39,10 @@ function resetAll() {
 
 // event listener of slider
 $("#box-number").change((e) => {
-    let boxNumber = e.target.value;
+    let boxCount = e.target.value;
     resetBoard();
     resetFlexItems();
-    createBoxes(boxNumber);
+    createBoxes(boxCount);
 })
 
 // event listener of reset button
@@ -59,7 +59,7 @@ for (let element of selectElements) {
     })
 }
 
-// event listeners of flex-items input elements
+// event listeners of flex-items elements
 const inputElements = $(".flex-items input, .flex-items select");
 for (let element of inputElements) {
     $(`#${element.id}`).change((e) => {
