@@ -78,7 +78,7 @@ for (let element of inputElements) {
 
 // event listener for flex-item number
 $("#item-number").change((e) => {
-    let boxes = $(".box")
+    let boxes = $(".box");
     let itemNumber = $("#item-number").val();
     
     for (let i = 1; i <= boxes.length; i++) {
@@ -87,7 +87,7 @@ $("#item-number").change((e) => {
             $("#flex-grow").val($($(".box").get(i - 1)).css(`flex-grow`));
             $("#flex-shrink").val($($(".box").get(i - 1)).css(`flex-shrink`));
             
-            let flexBasis = $($(".box").get(i - 1)).css(`flex-basis`)
+            let flexBasis = $($(".box").get(i - 1)).css(`flex-basis`);
             if (flexBasis == "auto")
                 $("#flex-basis").val("");
             else
